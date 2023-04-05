@@ -1,0 +1,14 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-10789051.okta.com/oauth2/default
+app:
+  security:
+    enabled: true
+    defaultScope: SCOPE_devops:read
+    unsecuredRoutes:
+      - /api/v1/public/**
+
+

@@ -1,0 +1,13 @@
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{[%-5level]} %style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{blue} %style{[%t]}{magenta} %style{%c{1}}{red} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.hibernate.SQL" level="debug"/>
+        <Root level="INFO">
+            <AppenderRef ref="Console-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>
